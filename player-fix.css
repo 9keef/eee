@@ -1,0 +1,15 @@
+/* Player control fix: ensure control buttons receive pointer events and show pointer cursor */
+[class*="rounded-full"][class*="px-4"][class*="gap-2"] > button,
+[class*="rounded-full"][class*="px-4"][class*="gap-2"] > a,
+.rounded-full.px-4.sm\:px-6.py-2.sm\:py-3 button,
+.rounded-full.px-4.sm\:px-6.py-2.sm\:py-3 a{
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* Fallback global rule for any button inside the player control area */
+div[class*="bottom-0"][class*="z-50"] button,
+div[class*="bottom-0"][class*="z-50"] a{
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
